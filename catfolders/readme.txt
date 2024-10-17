@@ -3,7 +3,7 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.5
+Tested up to: 6.6.2
 Stable tag: 2.4.5
 Requires PHP: 7.2
 License: GPLv2 or later
@@ -15,7 +15,7 @@ Organize and manage your files with WordPress media folders. Fast, flexible, and
 
 Categorize media files better and faster with WP Media Folders - CatFolders.
 
-**CatFolders** creates folders in WordPress media library using the latest technology and minimum loading elements. It delivers a media file manager with the fastest performance possible.
+**CatFolders** creates folders in your WordPress media library using the latest technology and minimum loading elements. It delivers a media file manager with the fastest performance possible.
 
 What sets it apart from other media library plugins is **SPEED**! Just install the free version, create **a hundred folders**, and see it for yourself ;)
 
@@ -65,8 +65,8 @@ The sidebar reserved for the folder tree can be collapsed so that you can have t
 The enhanced **media library uploader** allows you to choose a folder first and then upload multiple files from your computer to that folder. You can also **bulk-upload many folders** from your storage to WordPress media library in a single drag-and-drop.
 
 **Works with Grid & List view**
-All files in a selected folder are sortable in **list mode**, which means you can easily sort your file list by file name, author, date, and custom post type where they are uploaded to.
-In **grid mode**, CatFolders works great both in the media library and in the page/post editor. This helps you choose the media files you need for the work-in-progress content much faster than working with an unorganized media library.
+All files in a selected folder are sortable in **list mode**, which means you can easily sort your file list by file name, author, date, and custom post type to which they are uploaded.
+In **grid mode**, CatFolders works great both in the media library and the page/post editor. This helps you choose the media files you need for the work-in-progress content much faster than working with an unorganized media library.
 
 **API for developers**
 REST APIs allow external plugins to perform specific actions, such as getting folder structure or triggering automated tasks.
@@ -74,38 +74,39 @@ REST APIs allow external plugins to perform specific actions, such as getting fo
 == 😻 WHAT'S THERE IN WP MEDIA FOLDERS PRO? ==
 
 **Advanced sort options**
-Once upgraded, you will be able to sort files by file name, created date, modified date, author, newest or oldest, etc. Whether you want to sort files and folders by default, or temporarily, there’s always a sorting method for you.
+Once upgraded, you can sort files by file name, created date, modified date, author, newest or oldest, etc. Whether you want to sort files and folders by default or temporarily, there’s always a sorting method for you.
 
 **Create subfolders**
-Each subfolder is a child of the parent folder that is above it. With [CatFolders Pro](https://wpmediafolders.com/), a main folder can hold unlimited subfolders. The parent/child analogy helps you organize your files more efficiently. It's very easy to hide or show all folders below the selected folder.
+Each subfolder is a child of the parent folder above it. With [CatFolders Pro](https://wpmediafolders.com/), a main folder can hold unlimited subfolders. The parent/child analogy helps you organize your files more efficiently. It's very easy to hide or show all folders below the selected folder.
 
 **Folder access permissions**
-Enable global folder structure where everyone sees the same categorization, or set folder permissions based on user roles. Access permissions include add new, view, and edit folders. Recommended for multi-author blogs, multi-vendor marketplace websites, and ecommerce businesses.
+Enable global folder structure where everyone sees the same categorization, or set folder permissions based on user roles. Access permissions include adding new, viewing, and editing folders. Recommended for multi-author blogs, multi-vendor marketplace websites, and ecommerce businesses.
 
 **Third-party themes and page builders**
 Not every theme and plugin has the same way of building, we work hard to deliver extra compatibility. So WP Media Folders will work with these builders throughout your website building stage:
 
-- Gutenberg
-- Elementor
-- WPBakery
-- Visual Composer
-- Themify
-- Divi Builder by Elegant Themes
-- Thrive Architect
-- Beaver Builder
-- Oxygen
-- Cornerstone Page Builder
-- Tatsu Builder
-- Bricks – Visual Site Builder for WordPress
-- Brizy WordPress Builder
-- Fusion Page Builder
+- Gutenberg: The built-in, block-based editor for WordPress.
+- Elementor: Drag-and-drop interface for robust page design.
+- WPBakery: The all-in-one page builder for custom layouts.
+- Visual Composer: Create professional-looking sites and grow your web creation business in minutes.
+- Themify: The ultimate theme and page builder combo.
+- Divi Builder by Elegant Themes: Various theme templates with a drag-and-drop interface.
+- Thrive Architect: Full web kit with optimized page design.
+- Beaver Builder: Build beautiful websites, fast and easy.
+- Oxygen: Flexible and powerful WordPress builder.
+- Cornerstone Page Builder: Build websites with pixel-perfect precision.
+- Tatsu Builder: The next-generation builder for modern WordPress sites.
+- Bricks: Visual site builder for WordPress with flexibility and control.
+- Brizy WordPress Builder: Fast, intuitive, and designed for speed.
+- Fusion Page Builder: The ultimate tool for unlimited design possibilities.
+- Zion Builder: Easy to use page builder for Kallyas theme.
 - And many more!
 
 == 👋 WHY USE CATFOLDERS? ==
 
-A typical WordPress media library looks like a cluster of thousands of multimedia files. They are placed in year and month folderized order, and it can be really hard to find a specific image in a published page or post. 
+A typical WordPress media library looks like a cluster of thousands of multimedia files. They are placed in year and month folderized order, and it can be tough to find a specific image in a published page or post. 
 
-With WP Media Folders—CatFolders, you can categorize existing attachments and new uploads using a drag-and-drop user interface.
+With CatFolders, you can categorize existing attachments and new uploads using a drag-and-drop user interface.
 
 Learn more on how to [optimize media management for your funnel website](https://getwpfunnels.com/media-management-tips/).
 
@@ -134,7 +135,7 @@ Hi, as an admin user, you can merge your user-based folders into "common folders
 
 
 = Do you offer lifetime license in the Pro version? =
-Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with lifetime licenses for single website or unlimited websites. It is loved by many freelancers and WordPress agencies.
+Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with lifetime licenses for a single website or unlimited websites. Many freelancers and WordPress agencies love it!
 
 == Screenshots ==
 1. WordPress media library folders list by CatFolders
@@ -142,7 +143,7 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 3. One click to import folders from other WordPress file manager plugins
 4. Filter media files in your library from the page/post/product editor
 5. CatFolders' built-in image gallery options in Gutenberg
-6. Display image gallery from selected folder
+6. Display image gallery from a selected folder
 
 == Changelog ==
 

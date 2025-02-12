@@ -3,8 +3,8 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.6.2
-Stable tag: 2.4.5
+Tested up to: 6.7.1
+Stable tag: 2.4.7
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Organize and manage your files with WordPress media folders. Fast, flexible, and
 
 Categorize media files better and faster with WP Media Folders - CatFolders.
 
-**CatFolders** creates folders in your WordPress media library using the latest technology and minimum loading elements. It delivers a media file manager with the fastest performance possible.
+**CatFolders** creates virtual folders in your WordPress media library using ReactJS and the latest coding technologies with minimum loading weight. It offers a media file manager with a blazing-fast experience.
 
 What sets it apart from other media library plugins is **SPEED**! Just install the free version, create **a hundred folders**, and see it for yourself ;)
 
@@ -146,6 +146,9 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 6. Display image gallery from a selected folder
 
 == Changelog ==
+
+= Feb 12, 2025 - Version 2.4.7 =
+- Fixed: Request handling (compatible with JobBoardWP plugin)
 
 = May 23, 2024 – Version 2.4.5 =
 - Added: Rest API for developers

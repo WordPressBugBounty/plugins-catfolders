@@ -28,6 +28,8 @@ class WPMedia extends Base {
 		add_action( 'pre-upload-ui', array( $this, 'preUploadUi' ) );
 
 		add_filter( 'rest_prepare_attachment', array( $this, 'restPrepareAttachment' ), 10, 3);
+		add_action( 'attachment_fields_to_edit', array( $this, 'attachment_fields_to_edit' ), 10, 2 );
+		add_filter( 'attachment_fields_to_save', array( $this, 'attachment_fields_to_save' ), 10, 2 );
 	}
 
 	public function ajaxQueryAttachmentsArgs( $query ) {
@@ -159,5 +161,37 @@ class WPMedia extends Base {
 			$response->data['catfolder_id'] = ! is_null( $catfolder_id ) ? (int)$catfolder_id : null;
 		}
 		return $response;
+	}
+	public function attachment_fields_to_edit( $form_fields, $post ) {
+		$folder_id  = (int) FolderModel::getFolderFromPostId( $post->ID );
+		if( $folder_id > 0 ) {
+			$folder_name = FolderModel::getFolderFromFolderId( $folder_id );
+			$cat_folder  = (object) array(
+				'folder_id' => $folder_id,
+				'name'      => $folder_name,
+			);
+		} else {
+			$cat_folder  = (object) array(
+				'folder_id' => 0,
+				'name'      => __( 'Uncategorized', 'catfolders' ),
+			);
+		}
+		$folder_name = esc_attr( $cat_folder->name );
+		$post_id     = (int) $post->ID;
+		$read_only   = current_user_can( 'edit_post', $post_id ) ? '' : 'readonly';
+
+		$form_fields['catf'] = array(
+			'html'  => "<div class='catf-attachment-edit-wrapper' data-folder-id='{$folder_id}' data-attachment-id='{$post_id}'><input {$read_only} type='text' value='{$folder_name}'/></div>",
+			'label' => esc_html__( 'CatFolders location:', 'catfolders' ),
+			'helps' => esc_html__( 'Click on the folder name to move this file to another folder', 'catfolders' ),
+			'input' => 'html',
+		);
+		return $form_fields;
+	}
+	public function attachment_fields_to_save( $post, $attachment ) {
+		if ( isset( $attachment['catf'] ) ) {
+			FolderModel::set_attachments( $attachment['catf'], array( $post['ID'] ), false );
+		}
+		return $post;
 	}
 }

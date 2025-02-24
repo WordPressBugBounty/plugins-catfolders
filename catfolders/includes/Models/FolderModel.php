@@ -557,4 +557,12 @@ class FolderModel extends DataModel {
 
 		return is_null( $isExist ) ? false : true;
 	}
+	public static function getFolderFromFolderId( $folderId ) {
+		return self::builder()
+			->select( 'title' )
+			->from( self::TABLE )
+			->where(
+				array( 'id' => intval( $folderId ) )
+			)->value();
+	}
 }

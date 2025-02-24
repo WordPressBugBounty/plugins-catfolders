@@ -111,6 +111,17 @@ class FolderController extends Base {
 				),
 			)
 		);
+		register_rest_route(
+			CATF_ROUTE_NAMESPACE,
+			'/folder-counter',
+			array(
+				array(
+					'methods'             => \WP_REST_Server::READABLE,
+					'callback'            => array( $this, 'get_folder_counter' ),
+					'permission_callback' => array( $this, 'permission_callback' ),
+				),
+			)
+		);
 	}
 
 	public function permission_callback() {
@@ -291,5 +302,8 @@ class FolderController extends Base {
 		$this->updateUserSettings( $userSettings );
 
 		wp_send_json_success();
+	}
+	public function get_folder_counter( \WP_REST_Request $request ) {
+		return new \WP_REST_Response( FolderModel::get_folders_counter( true ) );
 	}
 }

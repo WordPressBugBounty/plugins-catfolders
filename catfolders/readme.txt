@@ -3,8 +3,8 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.7.1
-Stable tag: 2.4.7
+Tested up to: 6.7.2
+Stable tag: 2.4.8
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -146,6 +146,9 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 6. Display image gallery from a selected folder
 
 == Changelog ==
+
+= Feb 24, 2025 - Version 2.4.8 =
+- Added: File location
 
 = Feb 12, 2025 - Version 2.4.7 =
 - Fixed: Request handling (compatible with JobBoardWP plugin)

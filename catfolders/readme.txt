@@ -3,7 +3,7 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.7.2
+Tested up to: 6.8
 Stable tag: 2.4.8
 Requires PHP: 7.2
 License: GPLv2 or later

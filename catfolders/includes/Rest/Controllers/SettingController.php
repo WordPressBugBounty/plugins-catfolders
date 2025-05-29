@@ -16,6 +16,17 @@ class SettingController {
 				),
 			)
 		);
+		register_rest_route(
+			CATF_ROUTE_NAMESPACE,
+			'/other-settings/dismiss-banner-sidebar',
+			array(
+				array(
+					'methods'             => \WP_REST_Server::CREATABLE,
+					'callback'            => array( $this, 'dismiss_banner_sidebar' ),
+					'permission_callback' => array( $this, 'permission_callback' ),
+				),
+			)
+		);
 	}
 
 	public function update( \WP_REST_Request $request ) {
@@ -27,5 +38,10 @@ class SettingController {
 
 	public function permission_callback() {
 		return current_user_can( 'upload_files' );
+	}
+
+	public function dismiss_banner_sidebar( \WP_REST_Request $request ) {
+		$res = update_option( 'catf_banner_sidebar_dismissed', 'yes' );
+		return new \WP_REST_Response( array( 'success' => $res ) );
 	}
 }

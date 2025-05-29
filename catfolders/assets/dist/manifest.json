@@ -1,28 +1,28 @@
 {
   "admin.tsx": {
-    "file": "admin.85e35ea7.js",
+    "file": "admin.cc090a62.js",
     "src": "admin.tsx",
     "isEntry": true,
     "imports": [
-      "_SettingBanner.e8ce528a.js"
+      "_SettingBanner.3dd36f41.js"
     ],
     "css": [
       "admin.3c2b053e.css"
     ]
   },
   "main.tsx": {
-    "file": "main.44f84b03.js",
+    "file": "main.44761d55.js",
     "src": "main.tsx",
     "isEntry": true,
     "imports": [
-      "_SettingBanner.e8ce528a.js"
+      "_SettingBanner.3dd36f41.js"
     ],
     "css": [
-      "main.f6d60f8a.css"
+      "main.f9a837bd.css"
     ]
   },
-  "_SettingBanner.e8ce528a.js": {
-    "file": "SettingBanner.e8ce528a.js",
+  "_SettingBanner.3dd36f41.js": {
+    "file": "SettingBanner.3dd36f41.js",
     "css": [
       "SettingBanner.4b8082a1.css"
     ]
@@ -36,7 +36,7 @@
     "src": "admin.css"
   },
   "main.css": {
-    "file": "main.f6d60f8a.css",
+    "file": "main.f9a837bd.css",
     "src": "main.css"
   }
 }

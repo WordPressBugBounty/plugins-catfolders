@@ -4,7 +4,7 @@ Donate link: https://wpmediafolders.com/
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.4.8
+Stable tag: 2.4.9
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,10 +19,10 @@ Categorize media files better and faster with WP Media Folders - CatFolders.
 
 What sets it apart from other media library plugins is **SPEED**! Just install the free version, create **a hundred folders**, and see it for yourself ;)
 
-[DOCUMENTATION](https://wpmediafolders.com/documentation/) | [**CATFOLDERS PRO**](https://wpmediafolders.com/) 🚀
+🔗 [Documentation](https://wpmediafolders.com/documentation/) | [**CatFolders Pro**](https://wpmediafolders.com/) 🚀
 
-[youtube https://youtu.be/Jsc--w6ZtWs]
-
+🗂️ Ready to take your document management to a whole new _level_, literally?
+✨ Explore the [CatFolders Document Gallery plugin](https://wordpress.org/plugins/catfolders-document-gallery/) – now integrated with the power of **multi-level folders**!
 
 ==⚡️ FEATURES ==
 After installing and activating **WP Media Folders**, you will have an integrated folder tree right inside the WordPress media library.
@@ -70,6 +70,8 @@ In **grid mode**, CatFolders works great both in the media library and the page/
 
 **API for developers**
 REST APIs allow external plugins to perform specific actions, such as getting folder structure or triggering automated tasks.
+
+[youtube https://youtu.be/Jsc--w6ZtWs]
 
 == 😻 WHAT'S THERE IN WP MEDIA FOLDERS PRO? ==
 
@@ -146,6 +148,11 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 6. Display image gallery from a selected folder
 
 == Changelog ==
+
+= May 29, 2025 - Version 2.4.9 =
+- Added: Folder browser in popup
+- Added: Instant folder name search function in "Select or Upload Media" modal
+- Improved: User experience
 
 = Feb 24, 2025 - Version 2.4.8 =
 - Added: File location

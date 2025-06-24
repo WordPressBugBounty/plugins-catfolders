@@ -64,6 +64,8 @@ class GalleryBlock {
 			if ( ! wp_attachment_is_image( $post ) ) {
 				continue;
 			}
+			$attachment_data        = array();
+			$attachment_data['id']  = $post->ID;
 
 			$imageSrc               = wp_get_attachment_image_src( $post->ID, 'full' );
 			$imageSrc               = $imageSrc[0];
@@ -99,8 +101,17 @@ class GalleryBlock {
 				$caption = $attachment['caption'] ? '<figcaption class="wp-block-image-caption">' . esc_html( $attachment['caption'] ) . '</figcaption>' : '';
 				$li      = '<li class="catf-blocks-gallery-item wp-block-image">';
 				$li     .= '<figure>';
+				if ( 'attachment' === $attributes['thumbnailLink'] || 'media_file' === $attributes['thumbnailLink'] ) {
+					$thumbnailLinkTarget = in_array( $attributes['thumbnailLinkTarget'], array( '_self', '_blank' ) ) ? $attributes['thumbnailLinkTarget'] : '_self';
+					$link = 'attachment' === $attributes['thumbnailLink'] ? get_attachment_link( $attachment['id'] ) : wp_get_attachment_url( $attachment['id'] );
+					$li   .= '<a href="' . esc_url( $link ) . '" target="' . esc_attr( $thumbnailLinkTarget ) . '">';
+				}
 				$li     .= $img;
 				$li     .= $caption;
+
+				if ( 'attachment' === $attributes['thumbnailLink'] || 'media_file' === $attributes['thumbnailLink'] ) {
+					$li .= '</a>';
+				}
 
 				$li .= '</figure>';
 				$li .= '</li>';

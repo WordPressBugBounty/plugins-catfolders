@@ -23,6 +23,14 @@
     "caption": {
       "type": "boolean",
       "default": false
+    },
+    "thumbnailLink": {
+      "type": "string",
+      "default": "none"
+    },
+    "thumbnailLinkTarget": {
+      "type": "string",
+      "default": "_self"
     }
   },
   "textdomain": "catfolders",

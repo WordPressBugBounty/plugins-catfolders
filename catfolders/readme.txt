@@ -1,10 +1,10 @@
-=== CatFolders - WP Media Folders ===
+=== CatFolders - Tame Your WordPress Media Library by Category ===
 Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.4.9
+Stable tag: 2.5.0
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -140,14 +140,22 @@ Hi, as an admin user, you can merge your user-based folders into "common folders
 Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with lifetime licenses for a single website or unlimited websites. Many freelancers and WordPress agencies love it!
 
 == Screenshots ==
-1. WordPress media library folders list by CatFolders
-2. Bulk select and drag-and-drop to organize multiple files into a WP media folder
-3. One click to import folders from other WordPress file manager plugins
-4. Filter media files in your library from the page/post/product editor
-5. CatFolders' built-in image gallery options in Gutenberg
-6. Display image gallery from a selected folder
+1. Quickly search folder names in the Upload and Insert Media modal
+2. Organize your media library into folders, ideal for eCommerce sites
+3. Bulk select and drag & drop files into WP media folders with ease
+4. Import folders from other WordPress file manager plugins in one click
+5. Browse files in Elementor easily with the folder-based media list
+6. CatFolders Free version supports unlimited top-level folders
+7. Customizable image gallery block built for Gutenberg
+8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= Jun 24, 2025 - Version 2.5.0 =
+- New: Add thumbnail link
+- Added: Download folder as ZIP (Pro version)
+- Added: Sort folder name by default (Pro version)
+- Fixed: Issue with DiviBuilder
 
 = May 29, 2025 - Version 2.4.9 =
 - Added: Folder browser in popup

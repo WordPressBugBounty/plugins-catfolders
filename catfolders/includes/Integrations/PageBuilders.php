@@ -29,6 +29,7 @@ class PageBuilders {
 			'BricksBuilder',
 			'Avada',
 			'ZionBuilder',
+			'MfnBuilder',
 		);
 	}
 
@@ -56,7 +57,9 @@ class PageBuilders {
 
 		$this->enqueue->enqueueAdminScripts( 'builders' );
 	}
-
+	public function enqueueForMfnBuilder() {
+		add_action('mfn_footer_enqueue', array( $this, 'enqueueScripts' ));
+	}
 	public function enqueueForElementor() {
 		if ( defined( 'ELEMENTOR_VERSION' ) ) {
 			add_action( 'elementor/editor/before_enqueue_scripts', array( $this, 'enqueueScripts' ) );
@@ -95,6 +98,12 @@ class PageBuilders {
 				}
 			);
 		}
+		add_action(
+			'divi_visual_builder_assets_before_enqueue_scripts',
+			function() {
+				$this->enqueueScripts();
+			}
+		);
 	}
 
 	public function enqueueForThrive() {

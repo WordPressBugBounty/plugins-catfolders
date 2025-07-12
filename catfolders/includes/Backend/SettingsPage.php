@@ -29,8 +29,15 @@ class SettingsPage extends Base {
 			array( $this, 'page_callback' ),
 			'dashicons-open-folder'
 		);
+		add_submenu_page(
+			'cat_folders',
+			__( 'Settings', 'catfolders' ),
+			__( 'Settings', 'catfolders' ),
+			'manage_options',
+			'cat_folders',
+			array( $this, 'page_callback' )
+		);
 	}
-
 	public function page_callback() {
 		?>
 <div id="catf-setting-app"></div>

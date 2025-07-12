@@ -3,7 +3,7 @@
         'name' => 'catfolders/dennis',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ce74b4f10d4cbdbaeb2faf47e53ea730c7cf9e8c',
+        'reference' => '3b5359f5377f04e919b8b5eaf3219899012f8b7b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'catfolders/dennis' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ce74b4f10d4cbdbaeb2faf47e53ea730c7cf9e8c',
+            'reference' => '3b5359f5377f04e919b8b5eaf3219899012f8b7b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

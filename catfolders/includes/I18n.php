@@ -164,6 +164,7 @@ class I18n {
 				'personal_folder_helper'                => __( 'Folders are personal folders. The users can only access their own folder structure.', 'catfolders' ),
 				'gallery_setting'                       => __( 'Gallery Setting', 'catfolders' ),
 				'folders_layout_display'                => __( 'Layout Display', 'catfolders' ),
+				'enable_lightbox'                       => __( 'Enable Lightbox', 'catfolders' ),
 				'folders_columns'                       => __( 'Columns', 'catfolders' ),
 				'attachments_caption'                   => __( 'Display Caption', 'catfolders' ),
 				'none'                                  => __( 'None', 'catfolders' ),

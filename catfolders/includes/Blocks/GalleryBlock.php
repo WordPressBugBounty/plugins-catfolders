@@ -13,12 +13,27 @@ class GalleryBlock {
 	}
 
 	public function create_block_catfolders_block_init() {
+		wp_register_style( 'catf-photoswipe', CATF_PLUGIN_URL . 'assets/css/photoswipe/photoswipe.css', array(), CATF_VERSION );
+        wp_register_style( 'catf-photoswipe-default-skin', CATF_PLUGIN_URL . 'assets/css/photoswipe/default-skin.css', array(), CATF_VERSION );
+    
+        wp_register_script( 'catf-photoswipe', CATF_PLUGIN_URL . 'assets/js/photoswipe/photoswipe.min.js', array(), CATF_VERSION, true );
+        wp_register_script( 'catf-photoswipe-ui-default', CATF_PLUGIN_URL . 'assets/js/photoswipe/photoswipe-ui-default.min.js', array(), CATF_VERSION, true );
+        wp_register_script( 'catf-gallery', CATF_PLUGIN_URL . 'assets/js/photoswipe/catf-photoswipe.js', array(), CATF_VERSION, true );
+
 		register_block_type( __DIR__ . '/build', array( 'render_callback' => array( $this, 'render_block' ) ) );
 	}
 
 	public function render_block( $attributes ) {
 		if ( empty( $attributes['folders'] ) ) {
 			return '';
+		}
+
+		if ( isset( $attributes['enableLightbox'] ) && $attributes['enableLightbox'] ) {
+			wp_enqueue_style( 'catf-photoswipe' );
+			wp_enqueue_style( 'catf-photoswipe-default-skin' );
+			wp_enqueue_script( 'catf-photoswipe' );
+			wp_enqueue_script( 'catf-photoswipe-ui-default' );
+			wp_enqueue_script( 'catf-gallery' );
 		}
 
 		wp_enqueue_style( $this->script_handle, CATF_PLUGIN_URL . 'includes/Blocks/build/style-index.css', array(), CATF_VERSION );
@@ -68,8 +83,9 @@ class GalleryBlock {
 			$attachment_data['id']  = $post->ID;
 
 			$imageSrc               = wp_get_attachment_image_src( $post->ID, 'full' );
-			$imageSrc               = $imageSrc[0];
-			$attachment_data['src'] = $imageSrc;
+			$attachment_data['src'] = $imageSrc[0];
+			$attachment_data['width'] = $imageSrc[1];
+			$attachment_data['height'] = $imageSrc[2];
 
 			$imageAlt               = get_post_meta( $post->ID, '_wp_attachment_image_alt', true );
 			$imageAlt               = empty( $imageAlt ) ? $post->post_title : $imageAlt;
@@ -89,15 +105,39 @@ class GalleryBlock {
 		$attachments = $this->get_attachments( $attributes );
 		$html        = '';
 		if ( $attachments && '' !== $attachments ) {
+			$enableLightbox  = isset( $attributes['enableLightbox'] ) ? $attributes['enableLightbox'] : false;
+
 			$html    .= '<div class="wp-block-catfolders-block-catfolders-gallery catf-wp-block-gallery">';
-			$ulClass  = 'catf-blocks-gallery-grid';
+
+			$ulClass = '';
 			$ulClass .= ! empty( $attributes['className'] ) ? ' ' . esc_attr( $attributes['className'] ) : '';
-			$ulClass .= 'masonry' == $attributes['layout'] ? ' is-style-masonry' : '';
+			
+			if($attributes['layout'] == 'masonry') {
+				$ulClass .= ' catf-blocks-gallery-grid is-style-masonry';
+			} elseif($attributes['layout'] == 'grid') {
+				$ulClass .= ' catf-blocks-gallery-grid is-style-grid';
+			} else {
+				//flex
+				$ulClass .= 'catf-blocks-gallery-flex';
+			}
+
 			$ulClass .= ' catf-columns-' . esc_attr( $attributes['columns'] );
+
+			if ( $enableLightbox ) {
+				$ulClass .= ' catf-gallery-lightbox';
+			}
 
 			$html .= '<ul class="' . esc_attr( $ulClass ) . '">';
 			foreach ( $attachments as $attachment ) {
-				$img     = '<img src="' . esc_attr( $attachment['src'] ) . '" alt="' . esc_attr( $attachment['alt'] ) . '" >';
+				$img_attributes = 'src="' . esc_attr( $attachment['src'] ) . '" alt="' . esc_attr( $attachment['alt'] ) . '"';
+				
+				// Add width and height if available
+				if ( ! empty( $attachment['width'] ) && ! empty( $attachment['height'] ) ) {
+					$img_attributes .= ' width="' . esc_attr( $attachment['width'] ) . '" height="' . esc_attr( $attachment['height'] ) . '"';
+				}
+				
+				$img = '<img ' . $img_attributes . '>';
+				
 				$caption = $attachment['caption'] ? '<figcaption class="wp-block-image-caption">' . esc_html( $attachment['caption'] ) . '</figcaption>' : '';
 				$li      = '<li class="catf-blocks-gallery-item wp-block-image">';
 				$li     .= '<figure>';
@@ -107,10 +147,12 @@ class GalleryBlock {
 					$li   .= '<a href="' . esc_url( $link ) . '" target="' . esc_attr( $thumbnailLinkTarget ) . '">';
 				}
 				$li     .= $img;
-				$li     .= $caption;
 
 				if ( 'attachment' === $attributes['thumbnailLink'] || 'media_file' === $attributes['thumbnailLink'] ) {
 					$li .= '</a>';
+				}
+				if( $attributes['caption'] === true ) {
+					$li .= $caption;
 				}
 
 				$li .= '</figure>';

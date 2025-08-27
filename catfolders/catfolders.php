@@ -3,7 +3,7 @@
  * Plugin Name: CatFolders Lite - WP Media Folders
  * Plugin URI: https://wpmediafolders.com/
  * Description: Organize and manage your files with WordPress media library folders. Unlimitedly fast, flexible, and professional.
- * Version: 2.5.1
+ * Version: 2.5.2
  * Author: CatFolders
  * Author URI: https://wpmediafolders.com/
  * Text Domain: catfolders
@@ -55,7 +55,7 @@ if ( ! defined( 'CATF_PREFIX' ) ) {
 }
 
 if ( ! defined( 'CATF_VERSION' ) ) {
-	define( 'CATF_VERSION', '2.5.1' );
+	define( 'CATF_VERSION', '2.5.2' );
 }
 
 if ( ! defined( 'CATF_PLUGIN_FILE' ) ) {

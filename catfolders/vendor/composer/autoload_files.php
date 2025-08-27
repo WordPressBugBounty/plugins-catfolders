@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
     '11298418fac2d36d6d38c7c3efc5b206' => $vendorDir . '/10quality/wp-query-builder/src/Lib/functions.php',
 );

@@ -4,7 +4,7 @@ Donate link: https://wpmediafolders.com/
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 2.5.2
+Stable tag: 2.5.3
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -150,6 +150,9 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= Sep 8, 2025 - Version 2.5.3 =
+- Improved: Security
 
 = Aug 27, 2025 - Version 2.5.2 =
 - Added: Flex Layout

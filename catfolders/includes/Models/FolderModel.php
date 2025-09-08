@@ -223,6 +223,21 @@ class FolderModel extends DataModel {
 
 	public static function get_children_ids( $folder_ids ) {
 		if ( is_array( $folder_ids ) ) {
+			$folder_ids = array_map( 'intval', $folder_ids );
+			//remove duplicates
+			$folder_ids = array_unique( $folder_ids );
+			//remove 0
+			$folder_ids = array_filter( $folder_ids, function( $value ) {
+				return $value !== 0;
+			} );
+			$folder_ids = implode( ',', $folder_ids );
+		} else {
+			$folder_ids = explode( ',', $folder_ids );
+			$folder_ids = array_map( 'intval', $folder_ids );
+			$folder_ids = array_unique( $folder_ids );
+			$folder_ids = array_filter( $folder_ids, function( $value ) {
+				return $value !== 0;
+			} );
 			$folder_ids = implode( ',', $folder_ids );
 		}
 		$res = array();
@@ -379,6 +394,14 @@ class FolderModel extends DataModel {
 		$imgIds = apply_filters( 'catf_attachment_ids_to_folder', $imgIds );
 
 		if ( is_array( $imgIds ) && is_numeric( $folderId ) ) {
+			$imgIds = array_map( 'intval', $imgIds );
+			//remove duplicates
+			$imgIds = array_unique( $imgIds );
+			//remove 0
+			$imgIds = array_filter( $imgIds, function( $value ) {
+				return $value !== 0;
+			} );
+
 			$attachmentIds = implode( ',', $imgIds );
 			//get folders of these attachment ids
 			$old_folder_ids = self::builder()

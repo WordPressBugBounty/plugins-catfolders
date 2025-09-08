@@ -1,39 +1,39 @@
 {
   "admin.tsx": {
-    "file": "admin.065953d5.js",
+    "file": "admin.d89f2df7.js",
     "src": "admin.tsx",
     "isEntry": true,
     "imports": [
-      "_SettingBanner.341786df.js"
+      "_SettingBanner.4856d2e2.js"
     ],
     "css": [
       "admin.3c2b053e.css"
     ]
   },
   "main.tsx": {
-    "file": "main.54b80e99.js",
+    "file": "main.c47eeff2.js",
     "src": "main.tsx",
     "isEntry": true,
     "imports": [
-      "_SettingBanner.341786df.js"
+      "_SettingBanner.4856d2e2.js"
     ],
     "css": [
       "main.f9a837bd.css"
     ]
   },
-  "_SettingBanner.341786df.js": {
-    "file": "SettingBanner.341786df.js",
+  "_SettingBanner.4856d2e2.js": {
+    "file": "SettingBanner.4856d2e2.js",
     "css": [
       "SettingBanner.4b8082a1.css"
     ]
   },
-  "admin.css": {
-    "file": "admin.3c2b053e.css",
-    "src": "admin.css"
-  },
   "SettingBanner.css": {
     "file": "SettingBanner.4b8082a1.css",
     "src": "SettingBanner.css"
+  },
+  "admin.css": {
+    "file": "admin.3c2b053e.css",
+    "src": "admin.css"
   },
   "main.css": {
     "file": "main.f9a837bd.css",

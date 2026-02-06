@@ -177,6 +177,9 @@ class ImportController {
 	}
 
 	public function import_csv( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to import CSV.', 'catfolders' ) );
+		}
 		$params  = $request->get_file_params();
 		$handle  = \fopen( $params['file']['tmp_name'], 'r' );
 		$data    = array();
@@ -214,6 +217,9 @@ class ImportController {
 	}
 
 	public function get_folder_structure( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to get folder structure.', 'catfolders' ) );
+		}
 		$prefix = Helpers::sanitize_array( $request->get_param( 'prefix' ) );
 
 		if ( isset( $this->plugins_to_import[ $prefix ] ) ) {
@@ -405,6 +411,9 @@ class ImportController {
 	}
 
 	public function get_attachment_in_folder( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to get attachment in folder.', 'catfolders' ) );
+		}
 		$prefix = Helpers::sanitize_array( $request->get_param( 'prefix' ) );
 		if ( isset( $this->plugins_to_import[ $prefix ] ) ) {
 			$folders = get_option( $this->get_prefix_option( $prefix, 'folders_import' ), array() );
@@ -459,6 +468,9 @@ class ImportController {
 	}
 
 	public function process( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to process import.', 'catfolders' ) );
+		}
 		$plugin_prefix = Helpers::sanitize_array( $request->get_param( 'prefix' ) );
 
 		$folders     = get_option( '_catf_' . $plugin_prefix . '_folders_import' );
@@ -472,6 +484,9 @@ class ImportController {
 	}
 
 	public function clean_db() {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to clean database.', 'catfolders' ) );
+		}
 		global $wpdb;
 		// Delete all import folders
 		foreach ( $this->plugins_to_import as $key => $value ) {

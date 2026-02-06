@@ -30,6 +30,9 @@ class SettingController {
 	}
 
 	public function update( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to update settings.', 'catfolders' ) );
+		}
 		$name  = sanitize_key( $request->get_param( 'name' ) );
 		$value = sanitize_key( $request->get_param( 'value' ) );
 		OptionModel::update_option( array( $name => $value ) );

@@ -21,6 +21,12 @@ class BlockController {
 	}
 
 	public function permission_callback() {
+		if ( ! is_user_logged_in() ) {
+			return false;
+		}
+		if ( ! current_user_can( 'upload_files' ) ) {
+			return false;
+		}
 		return true;
 	}
 

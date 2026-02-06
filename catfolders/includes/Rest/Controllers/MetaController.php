@@ -24,6 +24,9 @@ class MetaController {
 	}
 
 	public function generate_size_api( \WP_REST_Request $request ) {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to generate sizes.', 'catfolders' ) );
+		}
 		$page = intval( $request->get_param( 'page' ) );
 		if ( $page < 1 ) {
 			$page = 1;

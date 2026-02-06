@@ -22,6 +22,9 @@ class ExportController {
 
 	public function get_csv() {
 		global $wpdb;
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to export CSV.', 'catfolders' ) );
+		}
 		$folders = $wpdb->get_results( "Select * from {$wpdb->prefix}catfolders", ARRAY_A );
 		$tree    = $this->get_nested_tree( $folders, 0, true );
 		return new \WP_REST_Response( array( 'folders' => $tree ) );

@@ -63,6 +63,9 @@ class PublicAPIController {
 	}
 
 	public function generate_api_key() {
+		if( ! current_user_can( 'manage_options' ) ) {
+			return new \WP_Error( 403, __( 'You are not allowed to generate API key.', 'catfolders' ) );
+		}
 		$key = Helpers::generateRandomString( 40 );
 		update_option( 'catf_rest_api_key', $key );
 		return new \WP_REST_Response( $key );

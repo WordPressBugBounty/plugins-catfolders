@@ -1,10 +1,10 @@
-=== CatFolders - Tame Your WordPress Media Library by Category ===
+=== CatFolders – WordPress Media Library Folders & Categories ===
 Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.8
-Stable tag: 2.5.3
+Tested up to: 6.9
+Stable tag: 2.5.4
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,11 +13,19 @@ Organize and manage your files with WordPress media folders. Fast, flexible, and
 
 == Description ==
 
-Categorize media files better and faster with WP Media Folders - CatFolders.
+WordPress organizes media by **upload date**. That's it. When you have thousands of files, finding the right image becomes a nightmare of endless scrolling.
 
-**CatFolders** creates virtual folders in your WordPress media library using ReactJS and the latest coding technologies with minimum loading weight. It offers a media file manager with a blazing-fast experience.
+👉 **CatFolders** gives you real organization. **Drag and drop files into custom folders** that match how you actually work. Problem solved!
 
-What sets it apart from other media library plugins is **SPEED**! Just install the free version, create **a hundred folders**, and see it for yourself ;)
+Ready to organize by project, client, topic, or content type instead of random upload dates?
+
+Organize your WordPress Media Library with an intuitive folder-based system:
+
+- Create unlimited folders for your media files
+- Drag and drop interface for easy organization
+- Filter and search media by folder
+- Clean, user-friendly interface integrated directly into WordPress
+- Compatible with popular WP page builders and themes
 
 🔗 [Documentation](https://wpmediafolders.com/documentation/) | [**CatFolders Pro**](https://wpmediafolders.com/) 🚀
 
@@ -106,11 +114,11 @@ Not every theme and plugin has the same way of building, we work hard to deliver
 
 == 👋 WHY USE CATFOLDERS? ==
 
-A typical WordPress media library looks like a cluster of thousands of multimedia files. They are placed in year and month folderized order, and it can be tough to find a specific image in a published page or post. 
+CatFolders turns WordPress categories into **virtual folders**, giving you a real file manager for your media library. Locate any file, document, or image instantly.
 
-With CatFolders, you can categorize existing attachments and new uploads using a drag-and-drop user interface.
+Built with ReactJS and modern coding standards, CatFolders creates lightweight virtual folders with minimal load impact. It delivers a smooth and blazing-fast media management experience.
 
-Learn more on how to [optimize media management for your funnel website](https://getwpfunnels.com/media-management-tips/).
+What truly sets CatFolders apart is **speed**. Install the free version, import a hundred folders, and see the performance for yourself 😉
 
 == Installation ==
 1. Download the plugin from wordpress.org
@@ -118,26 +126,36 @@ Learn more on how to [optimize media management for your funnel website](https:/
 3. Install and activate it
 4. After activating, just go to **WordPress Media** > **Library** to create your first folder/category.
 
-== Frequently Asked Questions ==
 
-= How does CatFolders create folders in my WordPress media library? =
-This plugin creates virtual folders for your own view. It doesn't make changes to your physical media folders or affect your media file URLs.
+## Frequently Asked Questions
 
-= Can I create unlimited folders? =
-Yes, with CatFolders - WP Media Folders, you can add unlimited media folders and they are all accessible while you edit page/post using WordPress page builders. 
+**Will organizing files into folders affect my existing media files or posts?**
 
-= Can it remember my last opened folder? =
-Yes, please go to **Settings**, open **Startup folder**, select **Previous folder** to make sure it will automatically take you to the recently opened WordPress media library folder to pick up where you left off.
+No, CatFolders doesn't move or alter your actual media files. It simply adds organizational categories to help you manage them better. All existing media links in your posts and pages will continue to work normally.
 
-= Can any users create and make changes to the folders? =
-It is under the admin's control. As an administrator, you can choose to have private folder structure for each user. Which means a user can view/edit those folders created by themselves, and cannot view/edit those folders created by other users.
+**What happens to my folders if I deactivate the plugin?**
 
-= I created all the folders and put all the images in the right place, then realised this view is only available to me. When I turn User-based folders OFF, the folders disappear, even for me. Is there a way to make the folders I created with User-based folders on, to be available to everyone?
-Hi, as an admin user, you can merge your user-based folders into "common folders". Here are the steps: [Exporting the CSV](https://wpmediafolders.com/docs/settings/backup-restore-folders/), changing the user number at the "created_by" column to zero, and uploading it again makes the folders available to everyone.
+Your media files will remain intact and accessible in the standard WordPress Media Library. The folder structure (categories) will be preserved in your database and will reappear if you reactivate the plugin.
 
+**Does CatFolders work with page builders like Elementor, Divi, or Gutenberg?**
 
-= Do you offer lifetime license in the Pro version? =
-Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with lifetime licenses for a single website or unlimited websites. Many freelancers and WordPress agencies love it!
+Yes, CatFolders is designed to work seamlessly with popular page builders and the WordPress block editor. You'll see your folder structure when selecting media in these tools.
+
+**Can I move files between folders?**
+
+Yes, you can easily move files by dragging and dropping them between folders or by editing the media file and changing its folder assignment.
+
+**Is there a limit to how many folders I can create?**
+
+No, you can create as many folders as you need to organize your media library effectively. 
+
+**Will this plugin slow down my website?**
+
+CatFolders is optimized for performance and only affects the admin area where you manage media. It has no impact on your website's front-end loading speed.
+
+**Can multiple users see and use the same folder structure?**
+
+Yes, the folder structure is site-wide and available to all users with appropriate media library permissions based on their WordPress role.
 
 == Screenshots ==
 1. Quickly search folder names in the Upload and Insert Media modal
@@ -150,6 +168,9 @@ Yes, [CatFolders - WP Media Folders Pro](https://wpmediafolders.com/) comes with
 8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= Jan 8, 2026 - Version 2.5.4 =
+- Improved: Security
 
 = Sep 8, 2025 - Version 2.5.3 =
 - Improved: Security

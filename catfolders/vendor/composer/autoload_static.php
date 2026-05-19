@@ -4,10 +4,9 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea
+class ComposerStaticInit9abf8f87a2c5c4b7e188ea1ffc3974a6
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '11298418fac2d36d6d38c7c3efc5b206' => __DIR__ . '/..' . '/10quality/wp-query-builder/src/Lib/functions.php',
     );
 
@@ -16,26 +15,10 @@ class ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea
         array (
             'enshrined\\svgSanitize\\' => 22,
         ),
-        'Z' => 
-        array (
-            'ZipStream\\' => 10,
-        ),
         'T' => 
         array (
             'TenQuality\\WP\\Database\\' => 23,
             'TenQuality\\Data\\' => 16,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-        ),
-        'M' => 
-        array (
-            'MyCLabs\\Enum\\' => 13,
         ),
         'C' => 
         array (
@@ -48,10 +31,6 @@ class ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea
         array (
             0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
-        'ZipStream\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maennchen/zipstream-php/src',
-        ),
         'TenQuality\\WP\\Database\\' => 
         array (
             0 => __DIR__ . '/..' . '/10quality/wp-query-builder/src',
@@ -59,18 +38,6 @@ class ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea
         'TenQuality\\Data\\' => 
         array (
             0 => __DIR__ . '/..' . '/10quality/php-data-model/src',
-        ),
-        'Symfony\\Polyfill\\Mbstring\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-        ),
-        'MyCLabs\\Enum\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/myclabs/php-enum/src',
         ),
         'CatFolders\\' => 
         array (
@@ -80,15 +47,14 @@ class ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Stringable' => __DIR__ . '/..' . '/myclabs/php-enum/stubs/Stringable.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit8d4c1fad2914c2e491eafa1ac66b01ea::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit9abf8f87a2c5c4b7e188ea1ffc3974a6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit9abf8f87a2c5c4b7e188ea1ffc3974a6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9abf8f87a2c5c4b7e188ea1ffc3974a6::$classMap;
 
         }, null, ClassLoader::class);
     }

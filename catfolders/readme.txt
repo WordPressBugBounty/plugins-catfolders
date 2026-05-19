@@ -3,8 +3,8 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 6.9
-Stable tag: 2.5.4
+Tested up to: 7.0
+Stable tag: 2.5.5
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,7 +27,7 @@ Organize your WordPress Media Library with an intuitive folder-based system:
 - Clean, user-friendly interface integrated directly into WordPress
 - Compatible with popular WP page builders and themes
 
-🔗 [Documentation](https://wpmediafolders.com/documentation/) | [**CatFolders Pro**](https://wpmediafolders.com/) 🚀
+🔗 [Documentation](https://wpmediafolders.com/documentation/) | [**Request a Pro Demo**](https://wpmediafolders.com/) 🚀
 
 🗂️ Ready to take your document management to a whole new _level_, literally?
 ✨ Explore the [CatFolders Document Gallery plugin](https://wordpress.org/plugins/catfolders-document-gallery/) – now integrated with the power of **multi-level folders**!
@@ -82,6 +82,9 @@ REST APIs allow external plugins to perform specific actions, such as getting fo
 [youtube https://youtu.be/Jsc--w6ZtWs]
 
 == 😻 WHAT'S THERE IN WP MEDIA FOLDERS PRO? ==
+
+**Organize pages, posts, and custom post types with folders**
+Once upgraded to Pro, you can bulk-select and move any page, post or CPT (WooCommerce products, coupons, Elementor templates, etc.) to your folder structure. A smart move to label everything properly!
 
 **Advanced sort options**
 Once upgraded, you can sort files by file name, created date, modified date, author, newest or oldest, etc. Whether you want to sort files and folders by default or temporarily, there’s always a sorting method for you.
@@ -168,6 +171,12 @@ Yes, the folder structure is site-wide and available to all users with appropria
 8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= May 19, 2026 - Version 2.5.5 =
+- Added: "Move" cursor to post type and media list mode
+- Fixed: Page reloading issue when user saves the settings in media library
+- Fixed: CSS issue with WP 7.0
+- Fixed: Duplicated "Rename" context menu option in Pro version
 
 = Jan 8, 2026 - Version 2.5.4 =
 - Improved: Security

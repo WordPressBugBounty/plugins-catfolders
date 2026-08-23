@@ -178,10 +178,21 @@ class WPMedia extends Base {
 		}
 		$folder_name = esc_attr( $cat_folder->name );
 		$post_id     = (int) $post->ID;
-		$read_only   = current_user_can( 'edit_post', $post_id ) ? '' : 'readonly';
+		// Matches the `for` attribute WordPress generates for this field's label.
+		$field_id = "attachments-{$post_id}-catf";
+
+		if ( current_user_can( 'edit_post', $post_id ) ) {
+			// A button rather than a text input: this only ever opens the folder
+			// picker, and a text input does not fire click on Enter or Space, so
+			// the picker was unreachable without a mouse.
+			$folder_label = esc_html( $cat_folder->name );
+			$control      = "<button type='button' id='{$field_id}' class='catf-attachment-edit-trigger'>{$folder_label}</button>";
+		} else {
+			$control = "<input id='{$field_id}' readonly type='text' value='{$folder_name}'/>";
+		}
 
 		$form_fields['catf'] = array(
-			'html'  => "<div class='catf-attachment-edit-wrapper' data-folder-id='{$folder_id}' data-attachment-id='{$post_id}'><input {$read_only} type='text' value='{$folder_name}'/></div>",
+			'html'  => "<div class='catf-attachment-edit-wrapper' data-folder-id='{$folder_id}' data-attachment-id='{$post_id}'>{$control}</div>",
 			'label' => esc_html__( 'CatFolders location:', 'catfolders' ),
 			'helps' => esc_html__( 'Click on the folder name to move this file to another folder', 'catfolders' ),
 			'input' => 'html',

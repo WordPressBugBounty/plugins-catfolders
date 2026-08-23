@@ -191,6 +191,12 @@ class I18n {
 				'rest_api_key'                          => __( 'REST API Key', 'catfolders' ),
 				'rest_api_key_desc'                     => __( 'Please see CatFolders API for developers.', 'catfolders' ),
 				'enable_folders_for_pt'                 => __( 'Enable Folders for Post Types', 'catfolders' ),
+				'sort'                                  => __( 'Sort', 'catfolders' ),
+				'more_options'                          => __( 'More options', 'catfolders' ),
+				'search_folders'                        => __( 'Search folders', 'catfolders' ),
+				'folder_name'                           => __( 'Folder name', 'catfolders' ),
+				/* translators: %1$s: folder name, %2$d: number of items inside the folder. */
+				'folder_with_count'                     => __( '%1$s, %2$d items', 'catfolders' ),
 			),
 		);
 	}

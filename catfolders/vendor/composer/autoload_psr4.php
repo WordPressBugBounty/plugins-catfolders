@@ -7,7 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'enshrined\\svgSanitize\\' => array($vendorDir . '/enshrined/svg-sanitize/src'),
+    'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),
     'TenQuality\\WP\\Database\\' => array($vendorDir . '/10quality/wp-query-builder/src'),
     'TenQuality\\Data\\' => array($vendorDir . '/10quality/php-data-model/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     'CatFolders\\' => array($baseDir . '/includes'),
 );

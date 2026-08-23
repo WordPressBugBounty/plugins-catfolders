@@ -24,7 +24,7 @@ class SettingsPage extends Base {
 		$this->settingSuffix = add_menu_page(
 			__( 'CatFolders', 'catfolders' ),
 			__( 'CatFolders', 'catfolders' ),
-			'manage_options',
+			'read',
 			'cat_folders',
 			array( $this, 'page_callback' ),
 			'dashicons-open-folder'
@@ -33,15 +33,23 @@ class SettingsPage extends Base {
 			'cat_folders',
 			__( 'Settings', 'catfolders' ),
 			__( 'Settings', 'catfolders' ),
-			'manage_options',
+			'read',
 			'cat_folders',
 			array( $this, 'page_callback' )
 		);
 	}
 	public function page_callback() {
-		?>
-<div id="catf-setting-app"></div>
-		<?php
+		if ( current_user_can( 'manage_options' ) ) {
+			?>
+			<div id="catf-setting-app"></div>
+			<?php
+		} else {
+			?>
+			<div class="wrap">
+				<p><?php esc_html_e( 'You do not have sufficient permissions to access the settings.', 'catfolders' ); ?></p>
+			</div>
+			<?php
+		}
 	}
 
 	public function adminEnqueueScripts( $hook_suffix ) {

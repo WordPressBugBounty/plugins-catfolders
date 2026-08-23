@@ -24,6 +24,10 @@
       "type": "boolean",
       "default": false
     },
+    "enableLightbox": {
+      "type": "boolean",
+      "default": false
+    },
     "thumbnailLink": {
       "type": "string",
       "default": "none"

@@ -3,8 +3,8 @@ Contributors: CatFolders
 Donate link: https://wpmediafolders.com/ 
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
-Tested up to: 7.0
-Stable tag: 2.5.5
+Tested up to: 7.1
+Stable tag: 2.5.6
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -171,6 +171,9 @@ Yes, the folder structure is site-wide and available to all users with appropria
 8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= Aug 23, 2026 - Version 2.5.6 =
+- Improved: WCAG Accessibility in the media library and settings screens (a11y)
 
 = May 19, 2026 - Version 2.5.5 =
 - Added: "Move" cursor to post type and media list mode

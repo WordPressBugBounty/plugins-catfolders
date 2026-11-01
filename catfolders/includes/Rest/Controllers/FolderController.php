@@ -294,8 +294,8 @@ class FolderController extends Base {
 
 	public function set_settings( \WP_REST_Request $request ) {
 		$userSettings = array(
-			'sortFolder'    => Helpers::sanitize_array( $request->get_param( 'sortFolder' ) ),
-			'sortFile'      => Helpers::sanitize_array( $request->get_param( 'sortFile' ) ),
+			'sortFolder'    => Helpers::sanitizeSortFolder( $request->get_param( 'sortFolder' ) ),
+			'sortFile'      => Helpers::sanitizeSortFile( $request->get_param( 'sortFile' ) ),
 			'startupFolder' => Helpers::sanitize_array( $request->get_param( 'startupMode' ) ),
 		);
 

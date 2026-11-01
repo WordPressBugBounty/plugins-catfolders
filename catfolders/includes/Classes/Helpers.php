@@ -33,12 +33,38 @@ class Helpers {
 		return 'list';
 	}
 
+	public static function sanitizeSortFile( $value ) {
+		$columns    = array( 'name', 'date', 'modified', 'author', 'title' );
+		$directions = array( 'ASC', 'DESC' );
+
+		if ( ! is_string( $value ) ) {
+			return '';
+		}
+
+		$parts = explode( '-', $value );
+		if ( 2 !== count( $parts ) || ! in_array( $parts[0], $columns, true ) || ! in_array( $parts[1], $directions, true ) ) {
+			return '';
+		}
+
+		return $value;
+	}
+
+	public static function sanitizeSortFolder( $value ) {
+		return in_array( $value, array( 'asc', 'desc' ), true ) ? $value : '';
+	}
+
 	public static function AutoOrderInListMode( $order ) {
 		global $wpdb;
 
+		// Validate again on read: older versions stored this value unchecked in user meta.
+		$order = self::sanitizeSortFile( $order );
+		if ( '' === $order ) {
+			return '';
+		}
+
 		$order = explode( '-', $order );
 
-		return "$wpdb->posts.post_$order[0] $order[1]";
+		return "{$wpdb->posts}.post_{$order[0]} {$order[1]}";
 	}
 
 	public static function sanitize_array( $var ) {

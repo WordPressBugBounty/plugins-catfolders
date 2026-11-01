@@ -4,7 +4,7 @@ Donate link: https://wpmediafolders.com/
 Tags: folders, media library, folder, media folder, gallery
 Requires at least: 5.2
 Tested up to: 7.1
-Stable tag: 2.5.6
+Stable tag: 2.5.7
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -171,6 +171,11 @@ Yes, the folder structure is site-wide and available to all users with appropria
 8. Display dynamic image galleries from selected folders beautifully
 
 == Changelog ==
+
+= Oct 1, 2026 - Version 2.5.7 =
+- New: Folders for the Plugins screen (PRO version)
+- Fixed: Security issue with an SQL injection. Props Mahammad Mammadov
+- Fixed: Security issue due to a missing capability check. Props Akshat Parikh
 
 = Aug 23, 2026 - Version 2.5.6 =
 - Improved: WCAG Accessibility in the media library and settings screens (a11y)

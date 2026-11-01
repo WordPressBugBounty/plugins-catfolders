@@ -33,6 +33,9 @@ class Notices {
 
 	public function first_folder_notice() {
 		check_ajax_referer( 'catf_nonce', 'nonce', true );
+		if ( ! current_user_can( 'upload_files' ) ) {
+			wp_send_json_error( null, 403 );
+		}
 		$optionFirstFolder = get_option( 'catf_first_folder_notice_dismiss' );
 		update_option(
 			'catf_first_folder_notice_dismiss',

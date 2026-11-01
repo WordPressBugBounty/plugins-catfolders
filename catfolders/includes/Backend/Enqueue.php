@@ -65,7 +65,7 @@ class Enqueue extends Base {
 				'pluginUrl'   => CATF_PLUGIN_URL,
 				'i18n'        => apply_filters( 'catf_i18n', I18n::getTranslation() ),
 				'adminUrl'    => get_admin_url(),
-				'restrictedFolders' => FolderUser::instance()->needMerge,
+				'restrictedFolders' => FolderUser::instance()->needMerge && current_user_can( 'manage_options' ),
 				'isBannerSidebarDismissed' => get_option( 'catf_banner_sidebar_dismissed', 'no' ),
 			)
 		);

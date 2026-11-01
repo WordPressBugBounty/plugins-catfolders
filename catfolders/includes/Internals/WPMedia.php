@@ -77,9 +77,10 @@ class WPMedia extends Base {
 		if ( Helpers::isListMode() ) {
 			$defaultFolder   = $this->userSettings['startupFolder'];
 			$defaultSortFile = $this->userSettings['sortFile'];
-			if ( $defaultSortFile ) {
-				if ( '' === $query->get( 'orderby' ) ) {
-					$clauses['orderby'] = Helpers::AutoOrderInListMode( $defaultSortFile );
+			if ( $defaultSortFile && '' === $query->get( 'orderby' ) ) {
+				$autoOrder = Helpers::AutoOrderInListMode( $defaultSortFile );
+				if ( '' !== $autoOrder ) {
+					$clauses['orderby'] = $autoOrder;
 				}
 			}
 			if ( ! \is_null( $catf_GET ) ) {
@@ -143,9 +144,8 @@ class WPMedia extends Base {
 				if ( $parent < 0 ) {
 					$parent = 0; //important
 				}
-				unset( $catf[0] );
-				foreach ( $catf as $k => $v ) {
-					$parent = FolderModel::create_or_get( $v, $parent );
+				if ( 0 === $parent && isset( $catf[1] ) && '' !== $catf[1] ) {
+					$parent = FolderModel::create_or_get( $catf[1], 0 );
 				}
 			}
 			FolderModel::set_attachments( $parent, array( $post_id ), false );

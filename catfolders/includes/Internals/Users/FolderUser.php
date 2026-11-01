@@ -48,6 +48,10 @@ class FolderUser extends Base {
 	public function run_merge() {
 		check_ajax_referer( 'catf_nonce', 'nonce', true );
 
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( array( 'message' => __( 'You are not allowed to merge folders.', 'catfolders' ) ), 403 );
+		}
+
 		global $wpdb;
 
 		if ( ! $this->needMerge ) {
